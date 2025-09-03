@@ -1,0 +1,417 @@
+Lerina, [03.09.2025 14:08]
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Jack Casino - Игровые автоматы</title>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-dice-5 me-2"></i>Lucky Jack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Игры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Турниры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-register">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero-section">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title">Добро пожаловать в мир азарта и больших выигрышей!</h1>
+                    <p class="hero-subtitle">Играйте в лучшие казино-игры с щедрыми бонусами</p>
+                    <button class="btn btn-play">Играть сейчас</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slots-section">
+        <div class="container">
+            <h2 class="section-title">Игровые автоматы</h2>
+            
+            <div class="slot-machine">
+                <div class="slot-screen">
+                    <div class="win-animation" id="winAnimation">ВЫИГРЫШ!</div>
+                    <div class="reels-container">
+                        <div class="reel">
+                            <div class="reel-inner" id="reel1">
+                                <div class="symbol">🍒</div>
+                                <div class="symbol">🍋</div>
+                                <div class="symbol">🍊</div>
+                                <div class="symbol">🍇</div>
+                                <div class="symbol">💎</div>
+                                <div class="symbol">7️⃣</div>
+                                <div class="symbol">🍀</div>
+                            </div>
+                        </div>
+                        <div class="reel">
+                            <div class="reel-inner" id="reel2">
+                                <div class="symbol">🍋</div>
+                                <div class="symbol">🍊</div>
+                                <div class="symbol">🍇</div>
+                                <div class="symbol">💎</div>
+                                <div class="symbol">7️⃣</div>
+                                <div class="symbol">🍀</div>
+                                <div class="symbol">🍒</div>
+                            </div>
+                        </div>
+                        <div class="reel">
+                            <div class="reel-inner" id="reel3">
+                                <div class="symbol">🍊</div>
+                                <div class="symbol">🍇</div>
+                                <div class="symbol">💎</div>
+                                <div class="symbol">7️⃣</div>
+                                <div class="symbol">🍀</div>
+                                <div class="symbol">🍒</div>
+                                <div class="symbol">🍋</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slot-controls">
+                    <div class="bet-controls">
+                        <button class="btn btn-danger" onclick="changeBet(-10)">-10</button>
+                        <button class="btn btn-warning" onclick="changeBet(-5)">-5</button>
+                        <span class="bet-amount">Ставка: <span id="betAmount">50</span>$</span>
+                        <button class="btn btn-success" onclick="changeBet(5)">+5</button>
+                        <button class="btn btn-primary" onclick="changeBet(10)">+10</button>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <button class="btn btn-play btn-lg" onclick="spinSlots()">Крутить!</button>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4>Баланс: <span id="balance">1000</span>$</h4>
+                        <h4>Результат: <span id="result">-</span></h4>
+                        <h4>Выигрыш: <span id="winAmount">0</span>$</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Популярные игры</h2>
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="game-card">
+                        <img src="https://avatars.mds.yandex.net/i?id=c5e2efc7dab58b9d710482fa2c352b11_l-16479758-images-thumbs&n=13" class="card-img-top" alt="Слоты">
+                        <div class="game-card-body">
+                            <h3 class="game-card-title">Слоты</h3>
+                            <p>Классические и современные игровые автоматы с джекпотами</p>
+                            <button class="btn btn-game">Играть</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="game-card">
+                        <img src="https://avatars.mds.yandex.net/i?id=c6e8dfd8e41fc08a5009e7899e1ea73e_l-5252657-images-thumbs&n=13" class="card-img-top" alt="Покер">
+                        <div class="game-card-body">
+                            <h3 class="game-card-title">Покер</h3>
+                            <p>Испытайте удачу в классической карточной игре против реальных игроков</p>
+                            <button class="btn btn-game">Играть</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="game-card">
+                        <img src="https://avatars.mds.yandex.net/get-mpic/12018251/2a000001954d4940ff561a0f65369d123398/orig" class="card-img-top" alt="Блэкджек">
+                        <div class="game-card-body">
+                            <h3 class="game-card-title">Блэкджек</h3>
+                            <p>Наберите 21 очко и обыграйте крупье в этой захватывающей игре</p>
+                            <button class="btn btn-game">Играть</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="game-card">
+                        <img src="https://baccarat.center/wp-content/uploads/1-6-757c4179_webp.webp" class="card-img-top" alt="Баккара">
+                        <div class="game-card-body">
+                            <h3 class="game-card-title">Баккара</h3>
+                            <p>Простая и элегантная карточная игра с высокими ставками</p>
+                            <button class="btn btn-game">Играть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="form-section">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="form-container">
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Имя</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+
+</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Тема</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Сообщение</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-play w-100">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h3 class="footer-title">Lucky Jack Casino</h3>
+                    <p>Лучшее онлайн-казино с лицензией и щедрыми бонусами. Играйте ответственно.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="footer-title">Быстрые ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Правила и условия</a></li>
+                        <li><a href="#">Ответственная игра</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-geo-alt me-2"></i> ул. Казино, 7, Лас-Вегас</li>
+                        <li><i class="bi bi-telephone me-2"></i> +1 (234) 567-89-00</li>
+                        <li><i class="bi bi-envelope me-2"></i> support@luckyjack.com</li>
+                        <li><i class="bi bi-clock me-2"></i> Круглосуточно, 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Lucky Jack Casino. Все права защищены. | 18+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Переменные для игры в слоты
+        let balance = 1000;
+        let currentBet = 50;
+        let isSpinning = false;
+        
+        // Символы и их стоимости
+        const symbols = [
+            { icon: '🍒', value: 1, name: 'Вишня' },
+            { icon: '🍋', value: 2, name: 'Лимон' },
+            { icon: '🍊', value: 3, name: 'Апельсин' },
+            { icon: '🍇', value: 4, name: 'Виноград' },
+            { icon: '💎', value: 10, name: 'Бриллиант' },
+            { icon: '7️⃣', value: 20, name: 'Семерка' },
+            { icon: '🍀', value: 50, name: 'Клевер' }
+        ];
+        
+        // Обновление отображения баланса и ставки
+        function updateDisplay() {
+            document.getElementById('balance').textContent = balance;
+            document.getElementById('betAmount').textContent = currentBet;
+
+
+}
+        
+
+        function changeBet(amount) {
+            if (isSpinning) return;
+            
+            currentBet += amount;
+            
+
+            if (currentBet < 5) currentBet = 5;
+            if (currentBet > 500) currentBet = 500;
+            if (currentBet > balance) currentBet = balance;
+            
+            updateDisplay();
+        }
+        
+        // Вращение слотов
+        function spinSlots() {
+            if (isSpinning) return;
+            
+            if (currentBet > balance) {
+                alert('Недостаточно средств на балансе!');
+                return;
+            }
+            
+            isSpinning = true;
+            balance -= currentBet;
+            updateDisplay();
+            
+
+            document.getElementById('winAnimation').style.display = 'none';
+            
+            // Получаем элементы барабанов
+            const reel1 = document.getElementById('reel1');
+            const reel2 = document.getElementById('reel2');
+            const reel3 = document.getElementById('reel3');
+            
+
+            reel1.style.top = '0';
+            reel2.style.top = '0';
+            reel3.style.top = '0';
+
+            const result1 = Math.floor(Math.random() * symbols.length);
+            const result2 = Math.floor(Math.random() * symbols.length);
+            const result3 = Math.floor(Math.random() * symbols.length);
+            
+            // Вычисляем конечные позиции для каждого барабана
+            const stopPosition1 = -result1 * 100;
+            const stopPosition2 = -result2 * 100;
+            const stopPosition3 = -result3 * 100;
+            
+            // Добавляем дополнительные обороты для эффекта анимации
+            const extraSpins = 5 * 100; // 5 дополнительных оборотов
+            
+            // Устанавливаем анимацию для каждого барабана
+            reel1.style.transition = 'top 3s cubic-bezier(0.1, 0.3, 0.2, 1)';
+            reel2.style.transition = 'top 3.5s cubic-bezier(0.1, 0.3, 0.2, 1)';
+            reel3.style.transition = 'top 4s cubic-bezier(0.1, 0.3, 0.2, 1)';
+            
+            // Запускаем анимацию
+            setTimeout(() => {
+                reel1.style.top = (stopPosition1 - extraSpins) + 'px';
+                reel2.style.top = (stopPosition2 - extraSpins) + 'px';
+                reel3.style.top = (stopPosition3 - extraSpins) + 'px';
+            }, 10);
+            
+            // Обработка результатов после завершения анимации
+            setTimeout(() => {
+                // Получаем выпавшие символы
+                const symbol1 = symbols[result1];
+                const symbol2 = symbols[result2];
+                const symbol3 = symbols[result3];
+                
+                // Отображаем результат
+                document.getElementById('result').textContent = 
+                    ${symbol1.icon} ${symbol2.icon} ${symbol3.icon};
+                
+                // Проверяем комбинации и вычисляем выигрыш
+                let winAmount = 0;
+                let winMessage = "Попробуйте еще раз!";
+                
+                // Джекпот (три семерки)
+                if (result1 === 5 && result2 === 5 && result3 === 5) {
+                    winAmount = currentBet * 100;
+                    winMessage = "ДЖЕКПОТ!!!";
+                } 
+                // Три одинаковых символа
+                else if (result1 === result2 && result2 === result3) {
+                    winAmount = currentBet * symbol1.value * 10;
+                    winMessage = Три ${symbol1.name}!;
+                }
+
+
+                else if (result1 === result2  result2 === result3  result1 === result3) {
+                    const matchedSymbol = result1 === result2 ? symbol1 : symbol3;
+                    winAmount = currentBet * matchedSymbol.value;
+                    winMessage = Два ${matchedSymbol.name}!;
+                }
+                // Выигрышная линия (вишня-вишня-вишня или другие комбинации)
+                else if (
+                    (result1 === 0 && result2 === 0) || // две вишни в начале
+                    (result2 === 0 && result3 === 0) || // две вишни в конце
+                    (result1 === 0 && result3 === 0)    // вишни по краям
+                ) {
+                    winAmount = currentBet * 5;
+                    winMessage = "Две вишни!";
+                }
+                
+                // Если есть выигрыш
+                if (winAmount > 0) {
+                    balance += winAmount;
+                    document.getElementById('winAmount').textContent = winAmount;
+                    // Показываем анимацию выигрыша
+                    document.getElementById('winAnimation').style.display = 'flex';
+                    // Воспроизводим звук выигрыша (если бы был)
+                } else {
+                    document.getElementById('winAmount').textContent = '0';
+                }
+                
+                updateDisplay();
+                
+                // Сбрасываем состояние вращения
+                setTimeout(() => {
+                    isSpinning = false;
+                }, 1000);
+                
+            }, 4000);
+        }
+        
+        // Инициализация
+        updateDisplay();
+    </script>
+</body>
+</html>
